@@ -31,9 +31,10 @@ public class RobotContainer {
 
   private final ExampleCommand m_autoCommand = new ExampleCommand(m_exampleSubsystem);
 
-  // drivetrain definitions
-  private final DrivetrainSubsystem drivetrain = new DrivetrainSubsystem();
-  private final UpdateManager updateManager = new UpdateManager(drivetrain); // have no idea what this is
+  // drivetrain definitions - idk if they can be public or static?
+  public static final DrivetrainSubsystem m_drivetrainSubsystem = new DrivetrainSubsystem();
+  public static final UpdateManager m_updateManager = new UpdateManager(m_drivetrainSubsystem); // have no idea what this is
+  
   // 2910 doesn't import their DriveCommand in the swervebot example 
   // TODO - i think DriveCommand drives to a specified coordinate?
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
@@ -47,14 +48,14 @@ public class RobotContainer {
         ));
     */
 
-    CommandScheduler.getInstance().setDefaultCommand(drivetrain, new DriveCommand(
-      drivetrain, 
+    CommandScheduler.getInstance().setDefaultCommand(m_drivetrainSubsystem, new DriveCommand(
+      m_drivetrainSubsystem, 
       () -> OI.leftStick.getY(), 
       () -> OI.leftStick.getX(), 
       () -> OI.rightStick.getRawAxis(RobotMap.RIGHT_JOYSTICK_CHANNEL)
     )); // idk why these lambdas are here but they work ? maybe ?
 
-    updateManager.startLoop(5.0e-3);
+    m_updateManager.startLoop(5.0e-3);
     
     // Configure the button bindings
     configureButtonBindings();

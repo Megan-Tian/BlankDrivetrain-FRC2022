@@ -31,22 +31,18 @@ public class RobotMap {
 
     public static final int DRIVETRAIN_FRONT_LEFT_MODULE_ANGLE_ENCODER = 3;
     public static final int DRIVETRAIN_FRONT_LEFT_MODULE_ANGLE_MOTOR = 8;
-    public static final double DRIVETRAIN_FRONT_LEFT_MODULE_ANGLE_OFFSET = -Math.toRadians(-24.5); // 2910 used 154.3
     public static final int DRIVETRAIN_FRONT_LEFT_MODULE_DRIVE_MOTOR = 7;
 
     public static final int DRIVETRAIN_FRONT_RIGHT_MODULE_ANGLE_ENCODER = 2;
     public static final int DRIVETRAIN_FRONT_RIGHT_MODULE_ANGLE_MOTOR = 4;
-    public static final double DRIVETRAIN_FRONT_RIGHT_MODULE_ANGLE_OFFSET = -Math.toRadians(48.5 + 45); // 2910 used 329.0
     public static final int DRIVETRAIN_FRONT_RIGHT_MODULE_DRIVE_MOTOR = 3;
 
     public static final int DRIVETRAIN_BACK_LEFT_MODULE_ANGLE_ENCODER = 1;
     public static final int DRIVETRAIN_BACK_LEFT_MODULE_ANGLE_MOTOR = 6;
-    public static final double DRIVETRAIN_BACK_LEFT_MODULE_ANGLE_OFFSET = -Math.toRadians(-145.8+5); // 2910 used 218.1
     public static final int DRIVETRAIN_BACK_LEFT_MODULE_DRIVE_MOTOR = 5;
 
     public static final int DRIVETRAIN_BACK_RIGHT_MODULE_ANGLE_ENCODER = 0;
     public static final int DRIVETRAIN_BACK_RIGHT_MODULE_ANGLE_MOTOR = 2;
-    public static final double DRIVETRAIN_BACK_RIGHT_MODULE_ANGLE_OFFSET = -Math.toRadians(-29.9); // 2910 used 268.9
     public static final int DRIVETRAIN_BACK_RIGHT_MODULE_DRIVE_MOTOR = 1;   
 
     public static final int L_REFERENCE_RESET_BUTTON = 8;
